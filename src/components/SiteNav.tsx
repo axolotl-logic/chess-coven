@@ -28,7 +28,7 @@ export function SiteNav() {
         </LinkButton>
       ))}
       <div className="min-h-0 border-b-2 border-amber-300"></div>
-      <LinkButton href="https://www.patreon.com/user?u=84821837">
+      <LinkButton href="https://www.patreon.com/axolotl-logic">
         Help Cover Costs
       </LinkButton>
     </nav>

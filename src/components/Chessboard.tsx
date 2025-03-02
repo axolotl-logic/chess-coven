@@ -48,7 +48,6 @@ export function Chessboard({
   movable = false,
 }: ChessboardProps) {
   const boardRef = useRef<HTMLDivElement>(null);
-  const boardWrapperRef = useRef<HTMLDivElement>(null);
   const [board, setBoard] = useState<BoardApi | null>(null);
 
   if (!fen) {
@@ -109,35 +108,5 @@ export function Chessboard({
     onSelect,
   ]);
 
-  useEffect(() => {
-    const wrapper = boardWrapperRef.current;
-    if (!wrapper) {
-      return;
-    }
-
-    const wrapperParent = wrapper.parentElement;
-    if (!wrapperParent) {
-      return;
-    }
-
-    const resizeObserver = new ResizeObserver(() => {
-      const rect = wrapperParent.getBoundingClientRect();
-      const minLength = Math.min(rect.height, rect.width);
-      const sizeAttr = `${minLength}px`;
-      wrapper.style.width = sizeAttr;
-      wrapper.style.height = sizeAttr;
-    });
-
-    resizeObserver.observe(wrapperParent);
-    return () => resizeObserver.disconnect(); // clean up
-  }, [boardWrapperRef, board]);
-
-  return (
-    <div ref={boardWrapperRef} className="grow">
-      <div
-        ref={boardRef}
-        className="flex size-full items-center justify-center"
-      />
-    </div>
-  );
+  return <div className="m-auto size-80" ref={boardRef} />;
 }

@@ -19,7 +19,7 @@ module.exports = {
         body: ["Playfair Display", "serif"],
       },
       backgroundColor: {
-        backdrop: "rgb(31 41 55 / 50%)",
+        backdrop: "rgb(31 41 55 / 70%)",
         "forest-bottom": "#280410",
       },
     },

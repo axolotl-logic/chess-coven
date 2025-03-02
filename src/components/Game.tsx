@@ -288,7 +288,7 @@ export function Game({ logic, flavor, defaultLevel, id, getLevel }: GameProps) {
         >
           Exit
         </Link>
-        <div className="font-header text-2xl">{shortRules}</div>
+        <div className="font-header text-lg">{shortRules}</div>
       </div>
 
       {playerStatus == "wrong-guess" && (
