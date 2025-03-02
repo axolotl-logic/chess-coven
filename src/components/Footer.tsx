@@ -30,7 +30,7 @@ export function Footer() {
           </li>
         </ul>
         <span className="text-gray-400">
-          © 2023{" "}
+          © 2025{" "}
           <Link
             href="https://modestprogress.com/"
             className="hover:text-amber-500 hover:underline"
