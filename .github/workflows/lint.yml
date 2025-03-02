@@ -1,4 +1,4 @@
-name: Perform linting
+name: Lints
 on: push
 jobs:
   linting:
