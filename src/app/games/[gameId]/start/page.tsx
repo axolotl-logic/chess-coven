@@ -37,7 +37,7 @@ export default async function Page(props: HasParams) {
       </div>
       <Link
         href={`/games/${gameId}/play`}
-        className="mt-2 self-center rounded bg-amber-600 px-6 py-2 text-white hover:bg-amber-700"
+        className="mt-2 self-center rounded-sm bg-amber-600 px-6 py-2 text-white hover:bg-amber-700"
       >
         Play
       </Link>

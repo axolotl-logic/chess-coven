@@ -9,6 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 // CSS
 import "@/app/globals.css";
+import { Footer } from "@/components/Footer";
 
 export const metadata = {
   title: "Chess Coven",
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body className="flex min-h-dvh flex-col bg-forest-bottom bg-forest bg-top bg-no-repeat font-body text-white">
         <Analytics />
         {children}
+        <Footer />
       </body>
     </html>
   );

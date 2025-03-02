@@ -113,7 +113,7 @@ export default function Page() {
           {errors.username && <span>This field is required</span>}
           <button
             type="submit"
-            className="rounded bg-amber-500 px-4 py-2 font-bold text-white hover:bg-amber-700"
+            className="rounded-sm bg-amber-500 px-4 py-2 font-bold text-white hover:bg-amber-700"
           >
             Submit
           </button>

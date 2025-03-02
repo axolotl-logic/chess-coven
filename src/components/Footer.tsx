@@ -6,7 +6,7 @@ import { SiGithub, SiLichess } from "react-icons/si";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900/75 shadow">
+    <footer className="bg-gray-900/75 shadow-sm">
       <div className="flex w-full flex-wrap items-center justify-between p-2">
         <ul className="mr-8 flex flex-wrap items-center gap-4 text-gray-300">
           <li>

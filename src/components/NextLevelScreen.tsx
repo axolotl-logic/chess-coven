@@ -23,7 +23,7 @@ export function LevelClearScreen({
       <div className="flex gap-2">
         <button
           onClick={onContinue}
-          className="mt-2 self-center rounded bg-amber-600 px-6 py-2 text-white hover:bg-amber-700"
+          className="mt-2 self-center rounded-sm bg-amber-600 px-6 py-2 text-white hover:bg-amber-700"
         >
           Continue
         </button>

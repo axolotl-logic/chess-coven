@@ -284,7 +284,7 @@ export function Game({ logic, flavor, defaultLevel, id, getLevel }: GameProps) {
       <div className="p-4">
         <Link
           href="/"
-          className="float-right ml-2 rounded bg-red-600 px-2 py-1 font-bold text-white hover:bg-red-700"
+          className="float-right ml-2 rounded-sm bg-red-600 px-2 py-1 font-bold text-white hover:bg-red-700"
         >
           Exit
         </Link>

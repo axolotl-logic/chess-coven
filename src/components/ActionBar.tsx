@@ -41,14 +41,14 @@ export const ActionBar = ({
           {showAdvance && (
             <button
               onClick={onAdvance}
-              className="rounded bg-amber-600 px-2 py-1 font-bold text-white hover:bg-amber-700"
+              className="rounded-sm bg-amber-600 px-2 py-1 font-bold text-white hover:bg-amber-700"
             >
               Advance
             </button>
           )}
           {showGiveUp && (
             <button
-              className="whitespace-nowrap rounded bg-amber-600 px-2 py-1 font-bold text-white hover:bg-amber-700"
+              className="whitespace-nowrap rounded-sm bg-amber-600 px-2 py-1 font-bold text-white hover:bg-amber-700"
               onClick={onGiveUp}
             >
               Give Up
@@ -56,7 +56,7 @@ export const ActionBar = ({
           )}
           {showReplay && (
             <button
-              className="rounded bg-amber-600 px-2 py-1 font-bold text-white hover:bg-amber-700"
+              className="rounded-sm bg-amber-600 px-2 py-1 font-bold text-white hover:bg-amber-700"
               onClick={onReplay}
             >
               Replay
