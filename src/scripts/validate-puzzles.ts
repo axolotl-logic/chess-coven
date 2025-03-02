@@ -4,8 +4,8 @@ import { PuzzleCollectionSchema } from "@/types";
 import { parseArgs } from "node:util";
 import { readFile } from "fs/promises";
 import { exit } from "node:process";
-import { glob } from "glob";
 import { join as pathJoin } from "node:path";
+import { globSync } from "node:fs";
 
 async function validateOne(path: string): Promise<boolean> {
   const msg = `Validating ${path}...`;
@@ -32,10 +32,10 @@ async function validateOne(path: string): Promise<boolean> {
   return false;
 }
 
-async function getPuzzlePaths(): Promise<string[]> {
+function getPuzzlePaths(): string[] {
   const puzzlesPath = pathJoin(__dirname, "..", "..", "assets", "puzzles", "*");
 
-  return await glob(puzzlesPath);
+  return globSync(puzzlesPath);
 }
 
 async function main() {
@@ -48,7 +48,7 @@ async function main() {
   if (path) {
     paths = [path];
   } else {
-    paths = await getPuzzlePaths();
+    paths = getPuzzlePaths();
   }
 
   let success = true;

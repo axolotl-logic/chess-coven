@@ -42,21 +42,6 @@ export const games: Record<
     },
     collection: checksCaptures as PuzzleCollection,
   },
-  counting: {
-    logic: {
-      autoAdvance: true,
-      solutionType: "number",
-      supportNoSolution: false,
-    },
-    flavor: {
-      title: "Count Capture Points",
-      rules: "Watch the animation and determine the change in material value.",
-      shortRules: "Enter total capture points",
-      story:
-        "The death toll from the war increases every day. The war has gone on far too long and soon will be the mutual ruin of both kingdoms. You must prepare a PowerPoint slide presentation to convince the ruling monarchs that peace is the best option.",
-    },
-    collection: counting as PuzzleCollection,
-  },
   undefended: {
     logic: {
       solutionType: "square",

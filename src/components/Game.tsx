@@ -84,7 +84,7 @@ export function Game({ logic, flavor, defaultLevel, id, getLevel }: GameProps) {
   try {
     const chess = new Chess(fens[0]);
     flipped = chess.turn() === BLACK;
-  } catch (e) {
+  } catch (err) {
     // We support invalid FENs
   }
 

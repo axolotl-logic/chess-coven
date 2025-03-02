@@ -11,9 +11,9 @@ import type { APIResponse, GameLevel, LevelId, Puzzle } from "@/types";
 import { newError } from "@/types";
 
 type HasParams = {
-  params: {
+  params: Promise<{
     gameId: string;
-  };
+  }>;
 };
 
 const PUZZLES_PER_LEVEL = 10;
@@ -60,7 +60,13 @@ async function getLevel(
 
   return { success: true, data: { name, puzzles, nextLevelId } };
 }
-export default async function Page({ params: { gameId } }: HasParams) {
+export default async function Page(props: HasParams) {
+  const params = await props.params;
+
+  const {
+    gameId
+  } = params;
+
   const flavor = getFlavor(gameId);
   if (flavor == null) {
     return notFound();

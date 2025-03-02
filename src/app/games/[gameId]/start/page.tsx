@@ -6,12 +6,18 @@ import { getFlavor } from "@/games";
 import Link from "next/link";
 
 type HasParams = {
-  params: {
+  params: Promise<{
     gameId: string;
-  };
+  }>;
 };
 
-export default function Page({ params: { gameId } }: HasParams) {
+export default async function Page(props: HasParams) {
+  const params = await props.params;
+
+  const {
+    gameId
+  } = params;
+
   const flavor = getFlavor(gameId);
   if (flavor == null) {
     return notFound();
